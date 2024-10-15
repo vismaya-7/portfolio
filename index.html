@@ -4,102 +4,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VISMAYA V | Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Academic Snapshots</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <header class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <nav class="d-none d-md-block">
+                <ul class="nav">
+                    <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>
+                    <li class="nav-item"><a href="#experience" class="nav-link text-white">Experience</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link text-white">Academic Snapshots</a></li>
+                   <!--- <li class="nav-item"><a href="#services" class="nav-link text-white">Services</a></li> --->
+                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+                    <li class="nav-item"><a href="https://linkedin.com/in/vismaya-v-68a677210" class="nav-link text-white">LinkedIn</a></li>
+                    <a href="files/Vismaya's Resume.pdf" class="btn btn-outline-light">Download Resume</a></li>
+                    
+                </ul>
+            </nav>
+            
     </header>
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Vismaya V, a Cybersecurity Professional.</p>
+
+    <section id="home" class="hero bg-black text-white text-center d-flex align-items-center justify-content-center" style="height: 90vh;">
+        <div class="hero-container">
+
+            <h1><span>I'm</span> <span>VISMAYA</span></h1>            
+                <h3><b>Cybersecurity Analyst</b></h3>
+              </div>
+       </section>
+
+    
+    <section id="about" class="section bg-dark text-white" style="height: 90vh;">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <p class="ml14">
+                <span class="text-wrapper">
+                    <span class="letters">
+                        Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst, I possess a robust background in threat analysis and penetration testing, and I am committed to fortifying digital defenses. My proactive approach identifies vulnerabilities and implements strategic solutions to mitigate risks effectively. I am eager to collaborate with forward-thinking organizations and individuals, leveraging my analytical skills to ensure robust cybersecurity frameworks that safeguard sensitive data and uphold operational integrity. Let's work together to enhance cybersecurity measures and protect valuable assets.
+                    </span>
+                    <span class="line"></span>
+                </span>
+            </p>
+        </div>
     </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Dedicated Junior Threat Intelligence Analyst, equipped with a B.Sc. in Computer Science and specialized Cybersecurity diploma. With a robust background in threat analysis and practical experience in penetration testing, I am dedicated to fortifying digital defenses. My proactive approach not only identifies vulnerabilities but also implements strategic solutions to mitigate risks effectively. I am eager to collaborate with forward-thinking organizations, leveraging my analytical skills to ensure robust cybersecurity frameworks that safeguard sensitive data and uphold operational integrity. Let's work together to enhance cybersecurity measures and protect valuable assets.</p>
+
+
+    <section id="experience" class="section bg-black text-white">
+        <div class="container">
+            <h2 class="text-center">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Threat Intelligence Analyst at Technisanct</h3>
+                    <p class="timeline-date">April 2024 - Present</p>
+                    <p>Specializing in monitoring and analyzing dark and deep web activities. My primary focus areas include ransomware groups, detecting source code leaks, and identifying breaches. I generate detailed reports that provide critical insights into emerging cyber threats for <a href="https://falconfeeds.io" target="_blank">FalconFeedsio</a>. Additionally, I contribute to our social media strategy by managing our <a href="https://x.com/FalconFeedsio" target="_blank">Twitter</a> account, where we share timely updates and insights on cyberattacks and cybersecurity trends.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Threat Intelligence Analyst Intern at Technisanct</h3>
+                    <p class="timeline-date">October 2023 - April 2023</p>
+                    <p>Focused on learning essential threat intelligence fundamentals while actively monitoring dark web, forums, and ransomware groups. Contributed to the team by generating detailed reports on breach incidents and threat actor activities, helping enhance FalconFeeds.io's cyber threat intelligence capabilities.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3 class="timeline-title">Security Analyst at Soften Technologies</h3>
+                    <p class="timeline-date">October 2023 - March 2024</p>
+                    <p>Focuses on protecting an organization's computer systems and networks from cyber threats. Responsibilities include monitoring network traffic, investigating potential security incidents, and analyzing security alerts. Also assists in conducting vulnerability assessments and penetration testing to identify security weaknesses.</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <article>
-            <h3>Threat Intelligence Analyst at Technisanct</h3>
-            <p><strong>Duration:</strong> April 2024 - Present</p>
-            <p><strong>Discription:</strong></p>
-            <ul>
-                <li>I specializing in monitoring and analyzing dark and deep web activities. My primary focus areas include ransomware groups, detecting source code leaks, and identifying breaches. I generate detailed reports that provide critical insights into emerging cyber threats for <a href="https://falconfeeds.io/">FalconFeeds.io</a>. Additionally, I contribute to our social media strategy by managing our <a href="https://x.com/FalconFeedsio">Twitter</a> account, where we share timely updates and insights on cyberattacks and cybersecurity trends.</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Threat Intelligence Analyst Intern at Technisanct</h3>
-            <p><strong>Duration:</strong> Otcober 2023 - April 2023</p>
-            <p><strong>Discription:</strong></p>
-            <ul>
-                <li>I focused on learning essential threat intelligence fundamentals while actively monitoring dark web, forums and ransomware groups. I contributed to the team by generating detailed reports on breach incidents and threat actor activities, helping enhance FalconFeeds.io's cyber threat intelligence capabilities.</li>
-            </ul>
-        </article>
-        <article>
-            <h3>Security Analyst at Soften Technologies</h3>
-            <p><strong>Duration:</strong> October 2023 - March 2024</p>
-            <p><strong>Discription:</strong></p>
-            <ul>
-                <li>I focus on protecting an organization's computer systems and networks from cyber threats. My role involves monitoring network traffic, investigating potential security incidents, and analyzing security alerts. I also assist in conducting vulnerability assessments and penetration testing to identify security weaknesses.</li>
-            </ul>
-        </article>
+
+    <!--
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Threat Intelligence</h3>
+                    <p>Monitoring and analyzing threat actor portals, dark web, forums, and ransomware groups. Creating detailed threat intelligence reports to enhance security.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-bug"></i></div>
+                    <h3>Penetration Testing</h3>
+                    <p>Conducting thorough vulnerability assessments and penetration tests to identify and mitigate security risks.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-hands-helping"></i></div>
+                    <h3>Incident Documentation</h3>
+                    <p>Recording and reporting on all security incidents to improve response strategies and future prevention measures.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h3>Incident Response Planning</h3>
+                    <p>Developing and implementing incident response plans to ensure a quick and effective response to security incidents.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <h3>Security Training</h3>
+                    <p>Conducting comprehensive security training programs that cover best practices. This training is tailored to enhance overall security awareness and resilience.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <h3>OSINT(Open Source Intelligence)</h3>
+                    <p>Gathering actionable intelligence from publicly available sources to enhance situational awareness and support decision-making processes.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <h3>SOC(Security Operations Center)</h3>
+                    <p>Implementing and managing a Security Operations Center to monitor, detect, and respond to security threats in real-time, ensuring the protection of organizational assets.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="skills" class="section bg-black text-white">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Threat Intelligence</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <h3>OSINT (Open Source Intelligence)</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Network Security Monitoring</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-lock"></i></div>
+                    <h3>Penetration Testing</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-bug"></i></div>
+                    <h3>Malware Analysis</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-user-secret"></i></div>
+                    <h3>Incident Response</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Report Generation</h3>
+                </div>
+                <div class="skills-item">
+                    <div class="icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Security Configuration</h3>
+                </div>
+              <!--  <div class="skills-item">
+                    <div class="icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Security</h3>
+                </div> -->
+            </div>
+        </div>
     </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><h2>Wild animal monitoring system (09/2022 - 03/2023)</h2>
-                <h5>Done as a part of my Graduation</h5>
-                Developed an advanced wildlife surveillance system using YOLO algorithm in Python, featuring CCTV analysis, speaker deterrence, and email alerts for government officials. Aiming to contribute to wildlife conservation through innovative technological solutions, with a strong background in machine learning and deep learning methodologies.</li>
-        </ul>
+    
+    
+
+    <section id="projects" class="section bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="project-grid row">
+                <div class="project col-md-6">
+                    <h3>Wild animal monitoring system</h3>
+                    <p>Developed an advanced wildlife surveillance system using YOLO algorithm in Python, featuring CCTV analysis, speaker deterrence, and email alerts for government officials. Aiming to contribute to wildlife conservation through innovative technological solutions, with a strong background in machine learning and deep learning methodologies.</p>
+                    <p class="project-date">09/2022 - 03/2023</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="education">
-        <h2>Academic Snapshots</h2>
-        <article>
-            <h3>Diploma in Cyber security</h3>
-            <h5>Soften Technologies</h5>
-            <p><strong>Duration:</strong> May 2023 - September 2023</p>
-            <p><strong>Courses:</strong></p>
-            <ul>
-                <li>CCNA</li>
-                <li>RedHat</li>
-                <li>Cybersecurity</li>
-            </ul>
-        </article>
-        <article>
-            <h3>BSc Computer science</h3>
-            <h5>College of Applied Science Ayalur (Calicut University)</h5>
-            <p><strong>Duration:</strong> 2020 - 2023</p>
-            <p><strong>Discription:</strong></p>
-        </article>
-        <article>
-            <h3>Higher Secondary (Plus Two)</h3>
-            <h4>Computer Science</h4>
-            <h5>Govt. Girls Higher secondary school Nemmara</h5>
-            <p><strong>Duration:</strong> 2018 - 2020</p>
-            <p><strong>Discription:</strong></p>
-        </article>
-        <article>
-            <h3>SSLC</h3>
-            <h5>Govt. Girls Higher secondary school Nemmara</h5>
-            <p><strong>Year of Completion:</strong> 2018 </p>
-        </article>
+
+    <section id="education" class="section bg-black text-white">
+        <div class="container">
+            <h2 class="text-center">Academic Snapshots</h2>
+            <div class="education-grid">
+                <div class="education-item">
+                    <details>
+                        <summary>Diploma in Cybersecurity</summary>
+                        <p>Soften Technologies</p>
+                        <p><strong>Duration:</strong> May 2023 - September 2023</p>
+                        <ul>
+                            <li>CCNA</li>
+                            <li>RedHat</li>
+                            <li>Cybersecurity</li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="education-item">
+                    <details>
+                        <summary>BSc Computer Science</summary>
+                        <p>College of Applied Science Ayalur (Calicut University)</p>
+                        <p><strong>Duration:</strong> 2020 - 2023</p>
+                    </details>
+                </div>
+                <div class="education-item">
+                    <details>
+                        <summary>Higher Secondary (Plus Two)</summary>
+                        <p>Computer Science</p>
+                        <p>Govt. Girls Higher Secondary School Nemmara</p>
+                        <p><strong>Duration:</strong> 2018 - 2020</p>
+                    </details>
+                </div>
+                <div class="education-item">
+                    <details>
+                        <summary>SSLC</summary>
+                        <p>Govt. Girls Higher Secondary School Nemmara</p>
+                        <p><strong>Year of Completion:</strong> 2018</p>
+                    </details>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: vismayakudallur@gmail.com</p>
-        <p><a href="linkedin.com/in/vismaya-v-68a677210">LinkedIn</a>
-        </p>
+
+    <section id="certificates" class="section bg-dark text-white">
+        <div class="container">
+            <h2 class="text-center">Certificates</h2>
+            <div class="certificate-grid row">
+                <div class="certificate col-md-3">
+                    <img src="images/certificate1.jpg" alt="Certificate 1" class="img-fluid">
+                    <!--<p>Certificate Description</p>-->
+                </div>
+                <div class="certificate col-md-3">
+                    <img src="images/certificate2.jpeg" alt="Certificate 2" class="img-fluid">
+                    <!--<p>certificate des</p>-->
+                </div>
+                <div class="certificate col-md-3">
+                    <img src="images/certificate3.jpg" alt="Certificate 3" class="img-fluid">
+                    <!--<p>Certificate Description</p>-->
+                </div>
+                <div class="certificate col-md-3">
+                    <img src="images/certificate4.jpg" alt="Certificate 4" class="img-fluid">
+                    <!--<p>Certificate Description</p>-->
+                </div>
+                <div class="certificate col-md-3">
+                    <img src="images/certificate5.jpeg" alt="Certificate 5" class="img-fluid">
+                    <!--<p>Certificate Description</p>-->
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section id="contact" class="section bg-black text-white">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <div class="contact-form">
+                <form id="contactForm" action="send_mail.php" method="POST">
+                    <input type="text" name="name" class="form-control my-2" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-control my-2" placeholder="Your Email" required>
+                    <textarea name="message" class="form-control my-2" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="mirage-container">
+        <l-mirage
+            size="60"
+            speed="2.5"
+            color="black"
+        ></l-mirage>
+    </div>
+
+    <script type="module">
+        import { mirage } from 'ldrs';
+
+        mirage.register();
+    </script>
+
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="mb-0">&copy; 2024 Vismaya V. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="files/Vismaya's Resume.pdf" class="btn btn-outline-light">Download Resume</a>
+                <a href="https://linkedin.com/in/vismaya-v-68a677210" class="btn btn-outline-light">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
