@@ -10,47 +10,90 @@
 <body>
 
     <header class="bg-dark text-white py-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            
-            <nav class="d-none d-md-block">
-                <ul class="nav">
-                    <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link text-white">Experience</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link text-white">Academic Snapshots</a></li>
-                   <!--- <li class="nav-item"><a href="#services" class="nav-link text-white">Services</a></li> --->
-                    <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
-                    <li class="nav-item"><a href="https://linkedin.com/in/vismaya-v-68a677210" class="nav-link text-white">LinkedIn</a></li>
-                    <a href="files/Vismaya's Resume.pdf" class="btn btn-outline-light">Download Resume</a></li>
-                    
-                </ul>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
+                        <!--<li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li>-->
+                        <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>
+                        <li class="nav-item"><a href="#experience" class="nav-link text-white">Experience</a></li>
+                        <li class="nav-item"><a href="#education" class="nav-link text-white">Academic Snapshots</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link text-white">Services</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
+                        <li class="nav-item"><a href="https://linkedin.com/in/vismaya-v-68a677210" class="nav-link text-white">LinkedIn</a></li>
+                        <li class="nav-item"><a href="files/Vismaya's Resume.pdf" class="btn btn-outline-light">Download Resume</a></li>
+                    </ul>
+                </div>
             </nav>
-            
+        </div>
     </header>
 
-    <section id="home" class="hero bg-black text-white text-center d-flex align-items-center justify-content-center" style="height: 90vh;">
-        <div class="hero-container">
+    <!-- Your content here -->
 
-            <h1><span>I'm</span> <span>VISMAYA</span></h1>            
-                <h3><b>Cybersecurity Analyst</b></h3>
-              </div>
-       </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
     
+
+    <section id="home" class="hero bg-black text-white text-center d-flex flex-column align-items-center justify-content-center" style="height: 90vh; position: relative;">
+        <div id="particles-js" style="position: absolute; width: 100%; height: 100%;"></div>
+        
+        <!-- Centered Hero Text -->
+        <div class="hero-text" style="position: relative; z-index: 1; margin-bottom: 40px;">
+            <h1><span>I'm</span> <span>VISMAYA</span></h1>
+            <h3 id="animated-text"><b>Cybersecurity Analyst</b></h3>
+        </div>
+        
+        <!-- About and Blog sections aligned side by side -->
+        <div class="container d-flex justify-content-between align-items-start" style="position: relative; z-index: 1; width: 100%; max-width: 1200px;">
+            <!-- About me section -->
+            <div class="about-section p-3 flex-fill">
+                <h4>About me</h4>
+                <p>Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst...</p>
+                <a href="#about" class="cta-button">Read More</a>
+            </div>
+            
+            <!-- Blog section -->
+           <!-- <div class="blog-section p-3 flex-fill">
+                <h4>Latest Blog:</h4>
+                <div class="blog-preview">
+                    <h5>Understanding Cyber Threats in 2024</h5>
+                    <p>Explore the latest trends and tactics used by threat actors in the cybersecurity landscape of 2024...</p>
+                    <a href="blog.html" class="cta-button">Read Full Article</a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Blog section -->
+    <div class="blog-section p-3 flex-fill">
+        <h4 class="mb-4">Blog</h4>
+        <div class="upcoming-update border rounded p-3">
+            <p class="font-weight-bold">Upcoming Update</p>
+            <p class="text-muted">Stay tuned! blog section is coming soon...</p>
+        </div>
+    </div>
+    </div>
+    </section>
+    
+        
     <section id="about" class="section bg-dark text-white" style="height: 90vh;">
         <div class="container">
             <h2 class="text-center">About Me</h2>
-            <p class="ml14">
-                <span class="text-wrapper">
+            <p id="text">              
                     <span class="letters">
-                        Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst, I possess a robust background in threat analysis and penetration testing, and I am committed to fortifying digital defenses. My proactive approach identifies vulnerabilities and implements strategic solutions to mitigate risks effectively. I am eager to collaborate with forward-thinking organizations and individuals, leveraging my analytical skills to ensure robust cybersecurity frameworks that safeguard sensitive data and uphold operational integrity. Let's work together to enhance cybersecurity measures and protect valuable assets.
-                    </span>
-                    <span class="line"></span>
-                </span>
+                       Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst, I possess a robust background in threat analysis and penetration testing, and I am committed to fortifying digital defenses. My proactive approach identifies vulnerabilities and implements strategic solutions to mitigate risks effectively. I am eager to collaborate with forward-thinking organizations and individuals, leveraging my analytical skills to ensure robust cybersecurity frameworks that safeguard sensitive data and uphold operational integrity. Let's work together to enhance cybersecurity measures and protect valuable assets.
+                    </span>                   
             </p>
         </div>
     </section>
+    
+ 
 
 
     <section id="experience" class="section bg-black text-white">
@@ -60,14 +103,14 @@
                 <div class="timeline-item">
                     <h3 class="timeline-title">Threat Intelligence Analyst at Technisanct</h3>
                     <p class="timeline-date">April 2024 - Present</p>
-                    <p>Specializing in monitoring and analyzing dark and deep web activities. My primary focus areas include ransomware groups, detecting source code leaks, and identifying breaches. I generate detailed reports that provide critical insights into emerging cyber threats for <a href="https://falconfeeds.io" target="_blank">FalconFeedsio</a>. Additionally, I contribute to our social media strategy by managing our <a href="https://x.com/FalconFeedsio" target="_blank">Twitter</a> account, where we share timely updates and insights on cyberattacks and cybersecurity trends.</p>
+                    <p>Specializing in monitoring and analyzing dark and deep web activities. My primary focus areas include ransomware groups, detecting source code leaks, and identifying breaches. I generate detailed reports that provide critical insights into emerging cyber threats for <a href="https://falconfeeds.io" target="_blank">FalconFeedsio</a>. Additionally, I contribute to our social media strategy by managing FalconFeeds's <a href="https://x.com/FalconFeedsio" target="_blank">Twitter</a> account, where we share timely updates and insights on cyberattacks and cybersecurity trends.</p>
                 </div>
                 <div class="timeline-item">
                     <h3 class="timeline-title">Threat Intelligence Analyst Intern at Technisanct</h3>
                     <p class="timeline-date">October 2023 - April 2023</p>
                     <p>Focused on learning essential threat intelligence fundamentals while actively monitoring dark web, forums, and ransomware groups. Contributed to the team by generating detailed reports on breach incidents and threat actor activities, helping enhance FalconFeeds.io's cyber threat intelligence capabilities.</p>
                 </div>
-                <div class="timeline-item">
+                    <div class="timeline-item">
                     <h3 class="timeline-title">Security Analyst at Soften Technologies</h3>
                     <p class="timeline-date">October 2023 - March 2024</p>
                     <p>Focuses on protecting an organization's computer systems and networks from cyber threats. Responsibilities include monitoring network traffic, investigating potential security incidents, and analyzing security alerts. Also assists in conducting vulnerability assessments and penetration testing to identify security weaknesses.</p>
@@ -76,7 +119,7 @@
         </div>
     </section>
 
-    <!--
+    
     <section id="services">
         <div class="container">
             <h2>Services</h2>
@@ -84,41 +127,41 @@
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-shield-alt"></i></div>
                     <h3>Threat Intelligence</h3>
-                    <p>Monitoring and analyzing threat actor portals, dark web, forums, and ransomware groups. Creating detailed threat intelligence reports to enhance security.</p>
+                   <!-- <p>Monitoring and analyzing threat actor portals, dark web, forums, and ransomware groups. Creating detailed threat intelligence reports to enhance security.</p>-->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-bug"></i></div>
                     <h3>Penetration Testing</h3>
-                    <p>Conducting thorough vulnerability assessments and penetration tests to identify and mitigate security risks.</p>
+                   <!-- <p>Conducting thorough vulnerability assessments and penetration tests to identify and mitigate security risks.</p> -->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-hands-helping"></i></div>
                     <h3>Incident Documentation</h3>
-                    <p>Recording and reporting on all security incidents to improve response strategies and future prevention measures.</p>
+                   <!-- <p>Recording and reporting on all security incidents to improve response strategies and future prevention measures.</p>-->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-users"></i></div>
                     <h3>Incident Response Planning</h3>
-                    <p>Developing and implementing incident response plans to ensure a quick and effective response to security incidents.</p>
+                   <!-- <p>Developing and implementing incident response plans to ensure a quick and effective response to security incidents.</p>-->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-lock"></i></div>
                     <h3>Security Training</h3>
-                    <p>Conducting comprehensive security training programs that cover best practices. This training is tailored to enhance overall security awareness and resilience.</p>
+                   <!-- <p>Conducting comprehensive security training programs that cover best practices. This training is tailored to enhance overall security awareness and resilience.</p>-->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-search"></i></div>
                     <h3>OSINT(Open Source Intelligence)</h3>
-                    <p>Gathering actionable intelligence from publicly available sources to enhance situational awareness and support decision-making processes.</p>
+                   <!-- <p>Gathering actionable intelligence from publicly available sources to enhance situational awareness and support decision-making processes.</p>-->
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-search"></i></div>
                     <h3>SOC(Security Operations Center)</h3>
-                    <p>Implementing and managing a Security Operations Center to monitor, detect, and respond to security threats in real-time, ensuring the protection of organizational assets.</p>
+                   <!-- <p>Implementing and managing a Security Operations Center to monitor, detect, and respond to security threats in real-time, ensuring the protection of organizational assets.</p>-->
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section id="skills" class="section bg-black text-white">
         <div class="container">
@@ -253,8 +296,7 @@
         <div class="container">
             <h2 class="text-center">Contact</h2>
             <div class="contact-form">
-                <form id="contactForm" action="send_mail.php" method="POST">
-                    <input type="text" name="name" class="form-control my-2" placeholder="Your Name" required>
+                <form action="https://formspree.io/f/xldeelod" method="POST">
                     <input type="email" name="email" class="form-control my-2" placeholder="Your Email" required>
                     <textarea name="message" class="form-control my-2" rows="4" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn-primary btn-block">Send Message</button>
@@ -262,6 +304,7 @@
             </div>
         </div>
     </section>
+    
 
 
     <div class="mirage-container">
@@ -281,7 +324,7 @@
 
     <footer class="bg-dark text-white py-3">
         <div class="container d-flex justify-content-between align-items-center">
-            <p class="mb-0">&copy; 2024 Vismaya V. All rights reserved.</p>
+            <p class="mb-0">Designed and developed by Vismaya. All rights reserved.</p>
             <div class="footer-links">
                 <a href="files/Vismaya's Resume.pdf" class="btn btn-outline-light">Download Resume</a>
                 <a href="https://linkedin.com/in/vismaya-v-68a677210" class="btn btn-outline-light">LinkedIn</a>
@@ -289,6 +332,9 @@
         </div>
     </footer>
 
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
