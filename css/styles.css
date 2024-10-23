@@ -3,13 +3,14 @@
 
 .hero-text {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .hero-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;     
   width: 100%;
+  padding: 5px;
   max-width: 1200px;
   margin: auto;
   gap: 20px;
@@ -61,7 +62,6 @@ h1:hover span {
 }
 
 
-
 .about-me, .blog-preview {
   padding: 15px;
 }
@@ -86,7 +86,6 @@ h1:hover span {
 }
 
 
-
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -94,7 +93,6 @@ body {
   background: #0e0e0e ;
   color: #fff;
 }
-
 
 header {
   background: linear-gradient(90deg, #000000, #434343);  
@@ -121,6 +119,11 @@ header {
 /* Optional: Change hover effect for links */
 .navbar-nav .nav-link:hover {
   color: #ddd !important;
+}
+
+.navbarNav {
+  display: block;
+  text-align: center;
 }
 
 
@@ -257,7 +260,8 @@ nav ul li a:hover {
 
 
 .section {
-  padding: 4rem 0;
+  padding: 2rem 1rem;
+ /* padding: 4rem 0; */
   background: #222222b0;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
@@ -334,6 +338,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 30px;
   background: linear-gradient(135deg, #2e2e2e, #1c1c1c); /* Modern background gradient */
+  height: 100vh;
 }
 
 .skills-grid {
@@ -413,6 +418,12 @@ nav ul li a:hover {
 #projects {
   background: linear-gradient(135deg, #252726, #222222b0); /* Gradient background */
   padding: 2rem 0;
+  height: 100vh;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 
@@ -453,6 +464,11 @@ nav ul li a:hover {
   padding: 60px 0;
   background: linear-gradient(135deg, #2e2e2e, #1c1c1c); /* Modern background gradient */
   color: #fff;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .text-center {
@@ -785,11 +801,16 @@ details[open] summary {
 /* Services Section Styling */
 #services {
   background: linear-gradient(135deg, #252726, #222222b0); /* Gradient background */
-  padding: 60px 20px;
+  padding: 60px 0px;
   margin-bottom: 40px;
   background-color: #222222b0;
   padding: 60px 20px;
   margin-bottom: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 #services .container {
