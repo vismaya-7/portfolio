@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap');
 
-
 .hero-text {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .hero-container {
   display: flex;
-  flex-direction: column;     
+  flex-direction: row;
   width: 100%;
-  padding: 5px;
+  padding: 10px;
   max-width: 1200px;
   margin: auto;
   gap: 20px;
@@ -18,7 +17,6 @@
 
 h1 {
   color: #ffffff41;
-  
   font-size: 50px;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
@@ -62,6 +60,7 @@ h1:hover span {
 }
 
 
+
 .about-me, .blog-preview {
   padding: 15px;
 }
@@ -84,59 +83,6 @@ h1:hover span {
   transform: scale(1.05);
   background-color: #218838;
 }
-
-
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #0e0e0e ;
-  color: #fff;
-}
-
-header {
-  background: linear-gradient(90deg, #000000, #434343);  
-  background-size: 200% 200%;
-  animation: lightning 3s infinite;
-  color: white;
-  padding: 10px 20px;
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-/* Ensure nav-links are white */
-.navbar-nav .nav-link {
-  color: white !important;
-}
-
-/* Optional: Change hover effect for links */
-.navbar-nav .nav-link:hover {
-  color: #ddd !important;
-}
-
-.navbarNav {
-  display: block;
-  text-align: center;
-}
-
-
-.content {
-  padding: 20px;
-  height: 2000px; /* Just to create scrollable content */
-}
-@keyframes lightning {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
 /* General section styling */
 #about {
@@ -200,6 +146,55 @@ header {
 }
 
 
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0e0e0e ;
+  color: #fff;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(90deg, #000000, #434343);  
+  background-size: 200% 200%;
+  animation: lightning 3s infinite;
+  color: white;
+  padding: 10px 20px;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+@keyframes lightning {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Nav-link styles */
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ddd !important;
+}
+
+.navbarNav {
+  display: block;
+  text-align: center;
+}
+
+/* Make sure the navbar is hidden on small screens initially */
 nav ul {
   list-style: none;
   margin: 0;
@@ -221,14 +216,9 @@ nav ul li a {
   font-family: 'Roboto', sans-serif;
 }
 
-nav ul li a.btn {
-  padding: 0.5rem 1rem; /* Ensure consistent padding for the button */
-}
-
 nav ul li a:hover {
   background-color: #0eb849c0;
 }
-
 
 .header-links {
   display: flex;
@@ -250,6 +240,8 @@ nav ul li a:hover {
   background-color: #333;
 }
 
+
+
 .hero {
   background: url('hero-background.jpg') no-repeat center center/cover;
   color: #fff;
@@ -260,8 +252,7 @@ nav ul li a:hover {
 
 
 .section {
-  padding: 2rem 1rem;
- /* padding: 4rem 0; */
+  padding: 4rem 0;
   background: #222222b0;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0);
@@ -338,7 +329,6 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 30px;
   background: linear-gradient(135deg, #2e2e2e, #1c1c1c); /* Modern background gradient */
-  height: 100vh;
 }
 
 .skills-grid {
@@ -418,12 +408,6 @@ nav ul li a:hover {
 #projects {
   background: linear-gradient(135deg, #252726, #222222b0); /* Gradient background */
   padding: 2rem 0;
-  height: 100vh;
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 
@@ -464,11 +448,6 @@ nav ul li a:hover {
   padding: 60px 0;
   background: linear-gradient(135deg, #2e2e2e, #1c1c1c); /* Modern background gradient */
   color: #fff;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .text-center {
@@ -511,8 +490,9 @@ nav ul li a:hover {
 /* Details and Summary Styling */
 details {
   cursor: pointer;
-  color: #00FF99;
+  color: hsl(120, 100%, 28%);
 }
+
 summary {
   font-size: 1.2rem;
   font-weight: bold;
@@ -521,6 +501,20 @@ summary {
   padding: 10px 0;
   list-style: none;
 }
+
+/* Dropdown Arrow */
+summary::after {
+  content: "▼"; /* Unicode for a down arrow */
+  font-size: 0.8rem;
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+/* Rotate arrow when details are open */
+details[open] summary::after {
+  transform: rotate(180deg); /* Rotate to point upwards */
+}
+
 summary:hover {
   color: #fff;
 }
@@ -547,112 +541,24 @@ details[open] summary {
   }
 }
 
-/* Styling for the "Academic Snapshots" heading */
-#education h2.text-center {
-  color: #ffffff; /* Makes the text white */
-}
-
 /* Grid layout for education items */
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-/* Individual education item styling */
-.education-item {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
-
-/* Hover effects */
-.education-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* Details and Summary Styling */
-details {
-  cursor: pointer;
-  color: #00FF99;
-}
-
-summary {
-  font-size: 1.2rem;
-  font-weight: bold;
-  outline: none;
-  transition: color 0.3s;
-  padding: 10px 0;
-  list-style: none;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-/* Dropdown Arrow */
-summary::after {
-  content: "▼"; /* Unicode for a down arrow */
-  font-size: 0.8rem;
-  margin-left: 10px;
-  transition: transform 0.3s;
-}
-
-/* Rotate arrow when details are open */
-details[open] summary::after {
-  transform: rotate(180deg); /* Rotate to point upwards */
-}
-
-summary:hover {
-  color: #fff;
-}
-
-p, li {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Animation for opening details */
-details[open] summary {
-  color: #fff;
-}
-
-/* Slide-in Animation */
-@keyframes slideIn {
-  0% {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Education Section Styling */
-#education {
-  padding: 60px 0;
-}
-
-.text-center {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #00FF99;
-}
-
-/* Grid layout for education items */
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 items in a row */
+  grid-template-columns: repeat(4, 1fr); /* 4 items in a row for larger screens */
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) { /* Adjust the max-width value based on your needs */
+  .education-grid {
+    grid-template-columns: 1fr; /* Change to one item per row */
+  }
+
+  .text-center {
+    font-size: 2rem; /* Reduce font size on mobile */
+  }
 }
 
 /* Individual education item styling */
@@ -671,36 +577,7 @@ details[open] summary {
 /* New Hover Effect: Scale and Glow */
 .education-item:hover {
   transform: scale(1.05); /* Scale up slightly */
-  box-shadow: 0 0 20px rgba(62, 139, 59, 0.6); /* Greenish glow */
-}
-
-details {
-  cursor: pointer;
-  color: #fff;
-}
-
-summary {
-  font-size: 1.2rem;
-  font-weight: bold;
-  outline: none;
-  transition: color 0.3s;
-  padding: 10px 0;
-  list-style: none;
-}
-
-summary:hover {
-  color: #fff;
-}
-
-p, li {
-  margin: 10px 0;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Animation for opening details */
-details[open] summary {
-  color: #fff;
+  box-shadow: 0 0 20px rgba(56, 162, 52, 0.6); /* Greenish glow */
 }
 
 /* Fade-in Animation */
@@ -713,23 +590,6 @@ details[open] summary {
       opacity: 1;
       transform: scale(1);
   }
-}
-
-/* Glow effect for a modern feel */
-.education-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 5px;
-  background: #2ea748;
-  transition: height 0.3s;
-  height: 0;
-}
-
-.education-item:hover::before {
-  height: 100%;
 }
 
 
@@ -801,16 +661,11 @@ details[open] summary {
 /* Services Section Styling */
 #services {
   background: linear-gradient(135deg, #252726, #222222b0); /* Gradient background */
-  padding: 60px 0px;
+  padding: 60px 20px;
   margin-bottom: 40px;
   background-color: #222222b0;
   padding: 60px 20px;
   margin-bottom: 40px;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 #services .container {
@@ -992,4 +847,4 @@ footer {
   align-items: center;
   width: 100px;
   height: 100px;
-}
+} 

@@ -1,3 +1,40 @@
+container.style.transform = `translate3d(${xOffset}px, ${yOffset}px, 0) scale(1.05)`;
+document.addEventListener('mousemove', (e) => {
+    const container = document.querySelector('#about .container');
+    const textCenter = document.querySelector('#about .text-center');
+    const pElements = document.querySelectorAll('#about p');
+
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+
+    const xOffset = (clientX / innerWidth - 0.5) * 30; // 30px max offset
+    const yOffset = (clientY / innerHeight - 0.5) * 30; // 30px max offset
+
+    container.style.transform = `translate3d(${xOffset}px, ${yOffset}px, 0) scale(1.05)`;
+    textCenter.style.transform = `translate3d(${xOffset / 2}px, ${yOffset / 2}px, 0)`;
+    pElements.forEach(p => {
+      p.style.transform = `translate3d(${xOffset / 3}px, ${yOffset / 3}px, 0)`;
+    });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          // Collapse the navbar by removing the 'show' class
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+  });
+  
+
 
 
 
@@ -96,9 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
 
-
-
-
 // Typing effect for the headline
 let textArray = [""];
 let typingSpeed = 100;
@@ -117,126 +151,6 @@ function typeText() {
 
 
 
-function deleteText() {
-    if (charIndex > 0) {
-        document.getElementById('animated-text').innerHTML = textArray[index].substring(0, charIndex - 1);
-        charIndex--;
-        setTimeout(deleteText, typingSpeed);
-    } else {
-        index = (index + 1) % textArray.length;
-        setTimeout(typeText, 500);
-    }
-}
-
-typeText();
-
-// Particles.js configuration
-particlesJS('particles-js',
-{
-    "particles": {
-        "number": {
-            "value": 100,
-            "density": {
-                "enable": true,
-                "value_area": 800
-            }
-        },
-        "color": {
-            "value": "#ffffff"
-        },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            "polygon": {
-                "nb_sides": 5
-            },
-        },
-        "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": 0.1,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 3,
-            "random": true,
-            "anim": {
-                "enable": false,
-                "speed": 40,
-                "size_min": 0.1,
-                "sync": false
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
-        },
-        "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
-        }
-    },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 1
-                }
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "repulse": {
-                "distance": 200,
-                "duration": 0.4
-            },
-            "push": {
-                "particles_nb": 4
-            },
-            "remove": {
-                "particles_nb": 2
-            }
-        }
-    },
-    "retina_detect": true
-});
 
 
 
