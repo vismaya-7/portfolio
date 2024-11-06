@@ -15,10 +15,10 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
                 
-                <!-- Button for mobile toggle -->
-                 <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!---- Button for mobile toggle -->
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
-                  </button> -->
+                  </button>
             
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,10 +26,10 @@
                         <li class="nav-item"><a href="#home" class="nav-link text-white">Home</a></li>
                         <!-- Uncomment the 'About' section when needed -->
                         <!-- <li class="nav-item"><a href="#about" class="nav-link text-white">About</a></li> -->
-                        <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>
                         <li class="nav-item"><a href="#experience" class="nav-link text-white">Experience</a></li>
-                        <li class="nav-item"><a href="#education" class="nav-link text-white">Academic Snapshots</a></li>
                         <li class="nav-item"><a href="#services" class="nav-link text-white">Services</a></li>
+                        <li class="nav-item"><a href="#skills" class="nav-link text-white">Skills</a></li>                       
+                        <li class="nav-item"><a href="#education" class="nav-link text-white">Academic Snapshots</a></li> 
                         <li class="nav-item"><a href="#contact" class="nav-link text-white">Contact</a></li>
                         <li class="nav-item"><a href="https://linkedin.com/in/vismaya-v-68a677210" class="nav-link text-white">LinkedIn</a></li>
                         <li class="nav-item">
@@ -43,6 +43,22 @@
         </div>
     </header>
     
+
+    <script>
+        // JavaScript to close the navbar when a link is clicked (only in mobile view)
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            const navbarCollapse = document.getElementById('navbarNav');
+    
+            navbarLinks.forEach((link) => {
+                link.addEventListener('click', function () {
+                    if (navbarCollapse.classList.contains('show')) { // Check if the navbar is currently expanded
+                        navbarCollapse.classList.remove('show'); // Manually close the navbar
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- Your content here -->
 
@@ -66,8 +82,8 @@
         <div class="container d-flex justify-content-between align-items-start" style="position: relative; z-index: 1; width: 100%; max-width: 1200px;">
             <!-- About me section -->
             <div class="about-section p-3 flex-fill">
-                <h4>About me</h4>
-                <p>Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst...</p>
+                <h4>Who am I ?</h4>
+                <p>I am a cybersecurity enthusiast dedicated to safeguarding the digital world. Currently navigating the complexities of threat...</p>
                 <a href="#about" class="cta-button">Read More</a>
             </div>
             
@@ -96,10 +112,12 @@
         
     <section id="about" class="section bg-dark text-white" style="height: 90vh;">
         <div class="container">
-            <h2 class="text-center">About Me</h2>
+            <h2 class="text-center">Who am I ?</h2>
             <p id="text">              
                     <span class="letters">
-                       Dedicated Cybersecurity Analyst with a B.Sc. in Computer Science and a specialized Cybersecurity diploma. Currently working as a Junior Threat Intelligence Analyst, I possess a robust background in threat analysis and penetration testing, and I am committed to fortifying digital defenses. My proactive approach identifies vulnerabilities and implements strategic solutions to mitigate risks effectively. I am eager to collaborate with forward-thinking organizations and individuals, leveraging my analytical skills to ensure robust cybersecurity frameworks that safeguard sensitive data and uphold operational integrity. Let's work together to enhance cybersecurity measures and protect valuable assets.
+                        I am a cybersecurity enthusiast dedicated to safeguarding the digital world, currently navigating the complexities of threat intelligence as a Junior Threat Intelligence Analyst. With a strong foundation in threat analysis and security assessments, I work diligently to identify vulnerabilities and develop strategic solutions that reinforce digital defenses. <br><br>
+
+                      I’m passionate about staying ahead of evolving threats and collaborating with forward-thinking organizations and individuals to protect valuable data and uphold operational integrity. Let's work together to create robust cybersecurity frameworks that strengthen resilience and secure assets in an ever-connected world.
                     </span>                   
             </p>
         </div>
@@ -131,49 +149,45 @@
         </div>
     </section>
 
-    
     <section id="services">
         <div class="container">
             <h2>Services</h2>
             <div class="services-grid">
                 <div class="service-item">
-                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Threat Intelligence</h3>
-                   <!-- <p>Monitoring and analyzing threat actor portals, dark web, forums, and ransomware groups. Creating detailed threat intelligence reports to enhance security.</p>-->
-                </div>
-                <div class="service-item">
                     <div class="icon"><i class="fas fa-bug"></i></div>
                     <h3>Penetration Testing</h3>
-                   <!-- <p>Conducting thorough vulnerability assessments and penetration tests to identify and mitigate security risks.</p> -->
+                    <p>Conducting thorough vulnerability assessments and penetration tests to identify and mitigate security risks.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-hands-helping"></i></div>
-                    <h3>Incident Documentation</h3>
-                   <!-- <p>Recording and reporting on all security incidents to improve response strategies and future prevention measures.</p>-->
+                    <h3>Network Analysis</h3>
+                    <p>Analyze network traffic and security configurations to identify vulnerabilities and strengthen defenses against attacks.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-users"></i></div>
-                    <h3>Incident Response Planning</h3>
-                   <!-- <p>Developing and implementing incident response plans to ensure a quick and effective response to security incidents.</p>-->
+                    <h3>Technical Documentation and Reporting</h3>
+                    <p>Produce clear, detailed documentation and reports on security incidents, assessments, and analysis, supporting strategic decision-making and compliance efforts.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-lock"></i></div>
                     <h3>Security Training</h3>
-                   <!-- <p>Conducting comprehensive security training programs that cover best practices. This training is tailored to enhance overall security awareness and resilience.</p>-->
+                    <p>Provide specialized training to equip individuals and teams with essential cybersecurity skills, fostering a strong security culture.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-search"></i></div>
-                    <h3>OSINT(Open Source Intelligence)</h3>
-                   <!-- <p>Gathering actionable intelligence from publicly available sources to enhance situational awareness and support decision-making processes.</p>-->
+                    <h3>OSINT (Open Source Intelligence)</h3>
+                    <p>Collect and analyze publicly available data to identify threats, support investigations, and strengthen threat intelligence.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon"><i class="fas fa-search"></i></div>
-                    <h3>SOC(Security Operations Center)</h3>
-                   <!-- <p>Implementing and managing a Security Operations Center to monitor, detect, and respond to security threats in real-time, ensuring the protection of organizational assets.</p>-->
+                    <h3>SOC (Security Operations Center)</h3>
+                    <p>Offer round-the-clock monitoring and analysis, swiftly detecting and responding to cyber threats to maintain secure operations.</p>
                 </div>
             </div>
         </div>
     </section>
+    
+
 
     <section id="skills" class="section bg-black text-white">
         <div class="container">
@@ -211,10 +225,10 @@
                     <div class="icon"><i class="fas fa-cogs"></i></div>
                     <h3>Security Configuration</h3>
                 </div>
-              <!--  <div class="skills-item">
+                <div class="skills-item">
                     <div class="icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud Security</h3>
-                </div> -->
+                    <h3>SIEM (Security Information and Event Management)</h3>
+                </div>
             </div>
         </div>
     </section>
@@ -344,7 +358,19 @@
         </div>
     </footer>
 
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/672b18db4304e3196addc7e4/1ic05i853';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
