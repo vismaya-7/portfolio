@@ -96,27 +96,40 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             
             <!-- Blog section -->
-           <!-- <div class="blog-section p-3 flex-fill">
-                <h4>Latest Blog:</h4>
-                <div class="blog-preview">
-                    <h5>Understanding Cyber Threats in 2024</h5>
-                    <p>Explore the latest trends and tactics used by threat actors in the cybersecurity landscape of 2024...</p>
-                    <a href="blog.html" class="cta-button">Read Full Article</a>
-                </div>
-            </div>
-        </div> -->
+<!-- Blog Section -->
+<div class="blog-section p-3 flex-fill">
+    <h4>Latest Blog:</h4>
+    <div class="blog-preview" id="medium-blog">
+        <p>Loading latest blog...</p>
+    </div>
+</div>
 
-        <!-- Blog section -->
-    <div class="blog-section p-3 flex-fill">
-        <h4 class="mb-4">Blog</h4>
-        <div class="upcoming-update border rounded p-3">
-            <p class="font-weight-bold">Upcoming Update</p>
-            <p class="text-muted">blog section is coming soon...</p>
-        </div>
-    </div>
-    </div>
-    </section>
-    
+<script>
+    const mediumRSS = "https://medium.com/feed/@vismayav";
+
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${mediumRSS}`)
+        .then(response => response.json())
+        .then(data => {
+            const latestBlog = data.items[0]; // Fetch the latest blog post
+            const blogContainer = document.getElementById("medium-blog");
+
+            // Remove any image or HTML content from the description
+            let cleanDescription = latestBlog.description.replace(/<img[^>]*>/g, ""); // Remove any <img> tags
+
+            // Update blog section with the latest blog details (no image)
+            blogContainer.innerHTML = `
+                <h5>${latestBlog.title}</h5>
+                <p>${cleanDescription.substring(0, 100)}...</p>
+                <a href="${latestBlog.link}" target="_blank" class="cta-button">Read Full Blog</a>
+            `;
+        })
+        .catch(error => {
+            console.error("Error fetching Medium RSS feed:", error);
+            document.getElementById("medium-blog").innerHTML = `<p>Unable to load the latest blog. Check back later!</p>`;
+        });
+</script>
+
+</section>
         
     <section id="about" class="section bg-dark text-white" style="height: 90vh;">
         <div class="container">
